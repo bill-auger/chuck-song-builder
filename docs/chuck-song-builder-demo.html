@@ -1,0 +1,18 @@
+<html><head><title>chuck-song-builder-demo</title></head><body>
+
+<audio controls>Your browser does not support the audio element, Fred.</audio>
+
+<script>
+  window.onload = function()
+  {
+    var src    = window.location.search.slice(1) ;
+    var audio  = document.getElementsByTagName("audio")[0] ;
+    audio.type = 'audio/wav' ;
+    audio.src  = src ;
+
+    if (!!src && ~src.indexOf('.wav')) audio.play() ;
+    else                               document.write("") ;
+  } ;
+</script>
+
+</body></html>
